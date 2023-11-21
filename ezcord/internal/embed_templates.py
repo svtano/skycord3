@@ -5,7 +5,7 @@ from copy import deepcopy
 from functools import cache
 
 from ..internal.dc import discord
-from .config import EzConfig
+from .config import SkyConfig
 
 _TEMPLATES: dict[str, discord.Embed] = {
     "success_embed": discord.Embed(color=discord.Color.green()),
