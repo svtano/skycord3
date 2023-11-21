@@ -21,7 +21,7 @@ from .internal.colors import (
 )
 from .internal.dc import discord
 
-DEFAULT_LOG = "ezcord"
+DEFAULT_LOG = "skycord"
 log = logging.getLogger(DEFAULT_LOG)
 
 
@@ -221,7 +221,7 @@ class _DiscordHandler(logging.Handler):
 async def _send_discord_log(webhook_url: str, record: logging.LogRecord, msg):
     async with aiohttp.ClientSession() as session:
         webhook = discord.Webhook.from_url(webhook_url, session=session)
-        name = "EzCord" if record.name == DEFAULT_LOG else record.name
+        name = "skycord" if record.name == DEFAULT_LOG else record.name
         try:
             await webhook.send(
                 content=msg,
@@ -305,14 +305,14 @@ def set_log(
     .. code-block:: python
 
         import logging
-        import ezcord
+        import skycord
 
         colors = {
             logging.DEBUG: "blue",
             logging.INFO: "red",
         }
 
-        ezcord.set_log(colors=colors)
+        skycord.set_log(colors=colors)
     """
     logger = logging.getLogger(name)
     if logger.handlers:
