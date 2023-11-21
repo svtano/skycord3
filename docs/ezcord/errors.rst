@@ -1,6 +1,6 @@
 Exceptions
 =======================
 
-.. automodule:: ezcord.errors
+.. automodule:: skycord.errors
    :members:
    :undoc-members:
