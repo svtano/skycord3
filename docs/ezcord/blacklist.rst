@@ -1,6 +1,6 @@
 Blacklist
 =======================
 
-.. automodule:: ezcord.blacklist
+.. automodule:: skycord.blacklist
    :members:
    :undoc-members:
