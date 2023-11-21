@@ -1,6 +1,6 @@
 Utils
 =======================
 
-.. automodule:: ezcord.utils
+.. automodule:: skycord.utils
    :members:
    :undoc-members:
