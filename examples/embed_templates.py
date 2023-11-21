@@ -12,7 +12,7 @@ emb.set_embed_templates(error_embed=error_embed)
 bot = Bot()
 
 
-@bot.slash_command()
+@skycord.slash_command()
 async def hey(ctx):
     await emb.error(ctx, "Error message")
     await emb.info(ctx, "Info message", title="Info Title")  # set an embed title
