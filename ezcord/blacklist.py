@@ -9,14 +9,14 @@ However, if you want to manage the blacklist in your own code, you can use these
 
 from __future__ import annotations
 
-from .internal import EzConfig
+from .internal import SkyConfig
 from .sql import DBHandler
 
 
 class _BanDB(DBHandler):
     def __init__(self):
-        self.db_name = EzConfig.blacklist.db_name
-        super().__init__(EzConfig.blacklist.db_path)
+        self.db_name = SkyConfig.blacklist.db_name
+        super().__init__(SkyConfig.blacklist.db_path)
 
     async def setup(self):
         await self.exec(
@@ -44,7 +44,7 @@ class _BanDB(DBHandler):
 
 
 def _blacklist_ready() -> bool:
-    if not EzConfig.blacklist:
+    if not SkyConfig.blacklist:
         return False
     return True
 
