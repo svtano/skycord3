@@ -7,7 +7,7 @@
 
         .. code-block:: python
 
-            from ezcord import View
+            from skycord import View
 
             class MyView(View):  # right
                 ...
@@ -54,19 +54,19 @@ def event(coro):
     -------
     .. code-block:: python
 
-        @ezcord.event
+        @skycord.event
         async def view_check(interaction):
             return interaction.user.id == 12345  # Returns True or False
 
-        @ezcord.event
+        @skycord.event
         async def on_view_check_failure(interaction):
             await interaction.response.send_message("You can't use this!")
 
-        @ezcord.event
+        @skycord.event
         async def on_view_error(error, item, interaction):
             await interaction.response.send_message("Something went wrong!")
 
-        @ezcord.event
+        @skycord.event
         async def on_modal_error(error, interaction):
             await interaction.response.send_message("Something went wrong!")
     """
@@ -134,7 +134,7 @@ class EzView(discord.ui.View):
     ) -> None:
         """Sends an error message to a webhook, if the URL was passed in :class:`.Bot`.
 
-        Executes all registered error handlers with the ``@ezcord.event`` decorator.
+        Executes all registered error handlers with the ``@skycord.event`` decorator.
         """
 
         description = get_error_text(interaction, error, item)
@@ -194,7 +194,7 @@ class EzModal(discord.ui.Modal):
     async def on_error(self, error: Exception, interaction: discord.Interaction) -> None:
         """Sends an error message to a webhook, if the webhook URL was passed into :class:`.Bot`.
 
-        Executes all registered error handlers with the ``@ezcord.event`` decorator.
+        Executes all registered error handlers with the ``@skycord.event`` decorator.
         """
 
         description = get_error_text(interaction, error, self)
