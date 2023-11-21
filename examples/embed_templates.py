@@ -1,6 +1,6 @@
 import discord
-
-from ezcord import Bot, emb
+import skycord
+from skycord import Bot, emb
 
 # override the default error embed with a custom one
 error_embed = discord.Embed(title="Error", color=discord.Color.orange())
