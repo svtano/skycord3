@@ -1,6 +1,6 @@
 Embeds
 =======================
 
-.. automodule:: ezcord.emb
+.. automodule:: skycord.emb
    :members:
    :undoc-members:
