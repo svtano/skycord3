@@ -3,11 +3,11 @@ import tempfile
 
 import pytest
 
-import ezcord
-from ezcord.internal.dc import discord
+import skycord
+from skycord.internal.dc import discord
 
 
-class UserDB(ezcord.DBHandler):
+class UserDB(skycord.DBHandler):
     def __init__(self, path):
         super().__init__(path)
 
@@ -39,7 +39,7 @@ def test_libs():
 
     intents = discord.Intents.default()
     intents.message_content = True
-    bot = ezcord.Bot(command_prefix="!", intents=intents)
+    bot = skycord.Bot(command_prefix="!", intents=intents)
 
     assert bot
     with pytest.raises(TypeError):
