@@ -1,7 +1,7 @@
-import ezcord
+import skycord
 
 
-class UserDB(ezcord.DBHandler):
+class UserDB(skycord.DBHandler):
     def __init__(self):
         super().__init__("user.db")
 
