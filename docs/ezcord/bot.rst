@@ -1,6 +1,6 @@
 Bot
 =======================
 
-.. automodule:: ezcord.bot
+.. automodule:: skycord.bot
    :members:
    :undoc-members:
