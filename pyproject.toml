@@ -6,7 +6,7 @@ requires-python = ">=3.9"
 license = {text = "MIT"}
 keywords = ["discord", "pycord", "py-cord"]
 authors = [
-    { name = "tibue99" }
+    { name = "svtano" }
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -31,8 +31,8 @@ docs = {file = "docs/requirements.txt"}
 dev = {file = "dev-requirements.txt"}
 
 [project.urls]
-GitHub = "https://github.com/tibue99/ezcord"
-Documentation = "https://ezcord.readthedocs.io"
+GitHub = "https://github.com/tibue99/skycord"
+Documentation = "https://skycord.readthedocs.io"
 
 [build-system]
 requires = ["setuptools>=43.0.0", "wheel"]
