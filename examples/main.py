@@ -2,7 +2,7 @@ import discord
 
 import ezcord
 
-bot = ezcord.Bot(
+bot = skycord.Bot(
     intents=discord.Intents.default(),
     error_webhook_url="WEBHOOK_URL",  # Replace with your webhook URL
     language="de",
