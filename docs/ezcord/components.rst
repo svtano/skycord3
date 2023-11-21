@@ -1,6 +1,6 @@
 Components
 =======================
 
-.. automodule:: ezcord.components
+.. automodule:: skycord.components
    :members:
    :undoc-members:
