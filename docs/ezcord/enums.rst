@@ -1,6 +1,6 @@
 Enums
 =======================
 
-.. automodule:: ezcord.enums
+.. automodule:: skycord.enums
    :members:
    :undoc-members:
