@@ -1,1 +1,1 @@
-include ezcord/internal/language/*.json
+include skycord/internal/language/*.json
