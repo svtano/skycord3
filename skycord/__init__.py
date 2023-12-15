@@ -1,4 +1,4 @@
-__title__ = skycord"
+__title__ = "skycord"
 __author__ = "svtano"
 __license__ = "MIT"
 __version__ = "0.4.1"
