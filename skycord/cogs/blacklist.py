@@ -14,7 +14,7 @@ from ..blacklist import _BanDB
 from ..bot import Bot, Cog
 from ..components import event
 from ..errors import Blacklisted
-from ..internal import EzConfig, t
+from ..internal import skyConfig, t
 from ..internal.dc import commands, discord
 from ..utils import create_text_file
 
@@ -26,7 +26,7 @@ async def _check_blacklist(
     interaction: Union[discord.Interaction, discord.ApplicationContext]
 ) -> bool:
     bans = await _db.get_bans()
-    if interaction.user.id in bans and EzConfig.blacklist:
+    if interaction.user.id in bans and skyConfig.blacklist:
         if EzConfig.blacklist.raise_error:
             raise Blacklisted()
         else:
