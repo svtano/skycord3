@@ -27,7 +27,7 @@ async def _check_blacklist(
 ) -> bool:
     bans = await _db.get_bans()
     if interaction.user.id in bans and skyConfig.blacklist:
-        if EzConfig.blacklist.raise_error:
+        if skyConfig.blacklist.raise_error:
             raise Blacklisted()
         else:
             await interaction.respond(t("no_perms"), ephemeral=True)
@@ -50,7 +50,7 @@ class Blacklist(Cog, hidden=True):
 
     admin = discord.SlashCommandGroup(
         t("admin_group"),
-        guild_ids=EzConfig.admin_guilds,
+        guild_ids=skyConfig.admin_guilds,
         default_member_permissions=discord.Permissions(administrator=True),
         checks=[commands.is_owner().predicate],
     )
