@@ -39,11 +39,11 @@ def test_libs():
 
     intents = discord.Intents.default()
     intents.message_content = True
-    bot = skycord.Bot(command_prefix="!", intents=intents)
+    sky = skycord.Bot(command_prefix="!", intents=intents)
 
-    assert bot
+    assert sky
     with pytest.raises(TypeError):
-        bot.run()
+        sky.run()
 
 
 @pytest.mark.asyncio
